@@ -99,8 +99,8 @@ Para CI, copiar `TF_STATE_BUCKET` y `TF_STATE_DYNAMODB_TABLE` a los secrets de G
 bash ml-training/scripts/build_lambda_dists.sh
 bash terraform/scripts/terraform-init-remote.sh   # omitir si backend.hcl ya existe
 cd terraform && terraform apply -var-file=terraform.tfvars
-bash terraform/scripts/deploy-backend.sh
-bash terraform/scripts/deploy-frontends.sh
+bash scripts/deploy-backend.sh
+bash scripts/deploy-frontends.sh
 ```
 
 ### Alternativa - Script completo
